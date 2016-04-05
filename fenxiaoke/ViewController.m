@@ -97,7 +97,7 @@
          [self MyParserXml:result];
          NSLog(@"%@",result);
          
-        [self cookieValueWithKey:@"FSAuthXG"];
+        [self setcookieValueWithUrl:@"https://www.fxiaoke.com/FHE/EM0AXUL/Authorize/PersonalLogin/iOS.55?_vn=55&_ov=8.3&_postid=-25449443&traceId=E-E..-08AEC323-E70C-4020-BA55-EE4D6C786D78"];
     } failure:^(NSError *error) {
         
     }];
@@ -105,7 +105,7 @@
     
 }
 
-- (NSString *)cookieValueWithKey:(NSString *)key
+- (NSString *)setcookieValueWithUrl:(NSString *)url
 {
     NSHTTPCookieStorage *sharedHTTPCookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     
@@ -113,21 +113,21 @@
         [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
     }
     
-    NSArray         *cookies = [sharedHTTPCookieStorage cookiesForURL:[NSURL URLWithString:@"https://www.fxiaoke.com/FHE/EM0AXUL/Authorize/PersonalLogin/iOS.55?_vn=55&_ov=8.3&_postid=-25449443&traceId=E-E..-08AEC323-E70C-4020-BA55-EE4D6C786D78"]];
+    NSArray         *cookies = [sharedHTTPCookieStorage cookiesForURL:[NSURL URLWithString:url]];
     
     
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:cookies];
     [[NSUserDefaults standardUserDefaults] setObject:data forKey:@"LOGINCOKIES"];
     
     
-    NSEnumerator    *enumerator = [cookies objectEnumerator];
-    NSHTTPCookie    *cookie;
-    while (cookie = [enumerator nextObject]) {
-        if ([[cookie name] isEqualToString:key]) {
-            return [NSString stringWithString:[[cookie value] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-        }
-    }
-    
+//    NSEnumerator    *enumerator = [cookies objectEnumerator];
+//    NSHTTPCookie    *cookie;
+//    while (cookie = [enumerator nextObject]) {
+//        if ([[cookie name] isEqualToString:key]) {
+//            return [NSString stringWithString:[[cookie value] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+//        }
+//    }
+//    
     return nil;
 }
 
@@ -218,7 +218,7 @@
 - (IBAction)getInfoAction:(id)sender
 {
     NSDictionary *driveInfo=@{@"M1":@2,@"M3":@"5A7F6DBD-7DD9-4332-947A-2A21E7FAC9F9",@"M4":@0,@"M5":@"iPhone6"};
-  NSDictionary*infodic=@{@"M3":@"&#x5E7F;&#x4E1C;&#x7701;&#x6DF1;&#x5733;&#x5E02;",@"M1":@384370,@"M2":driveInfo};
+   NSDictionary*infodic=@{@"M3":@"&#x5E7F;&#x4E1C;&#x7701;&#x6DF1;&#x5733;&#x5E02;",@"M1":@384370,@"M2":driveInfo};
     
     NSString  *tempstr=[self getMyxmlStr:infodic:@"701070970"];
  
@@ -230,7 +230,7 @@
         NSString *result = [[NSString alloc] initWithData:responseObj  encoding:NSUTF8StringEncoding];
         [self MyParserXml:result];
  
-        [self cookieValueWithKey:@"FSAuthXG"];
+        [self setcookieValueWithUrl:@"https://www.fxiaoke.com/FHE/EM0AXUL/Authorize/EnterpriseUserLogin/iOS.55?_vn=55&_ov=8.3&_postid=-1575664558&traceId=E-E..-69F10DFB-09E0-4E0E-A455-2DB1A15D61C4"];
     } failure:^(NSError *error) {
         
     }];
@@ -286,7 +286,7 @@
         NSString *result = [[NSString alloc] initWithData:responseObj  encoding:NSUTF8StringEncoding];
         [self MyParserXml:result];
         
-        [self cookieValueWithKey:@"FSAuthXG"];
+        [self setcookieValueWithUrl:@"https://www.fxiaoke.com/FHE/EM1AKaoQin/KaoQinApi/create/iOS.55?_vn=55&_ov=8.3&_postid=92695926&traceId=E-E.384370.1000-E7DE2828-098C-4D87-BD38-EE815FC7F73D" ];
     } failure:^(NSError *error) {
         
     }];
@@ -317,8 +317,7 @@
         NSString *result = [[NSString alloc] initWithData:responseObj  encoding:NSUTF8StringEncoding];
         [self MyParserXml:result];
         
-        [self cookieValueWithKey:@"FSAuthXG"];
-    } failure:^(NSError *error) {
+     } failure:^(NSError *error) {
         
     }];
     
@@ -333,8 +332,7 @@
         NSString *result = [[NSString alloc] initWithData:responseObj  encoding:NSUTF8StringEncoding];
         [self MyParserXml:result];
         
-        [self cookieValueWithKey:@"FSAuthXG"];
-    } failure:^(NSError *error) {
+     } failure:^(NSError *error) {
         
     }];
 }
