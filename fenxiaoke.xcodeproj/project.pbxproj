@@ -25,6 +25,11 @@
 		7533B9621CB3503C008E7D6A /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7533B9581CB3503C008E7D6A /* AFURLSessionManager.m */; };
 		7533B9651CB356A5008E7D6A /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7533B9641CB356A5008E7D6A /* libxml2.tbd */; };
 		7533B9691CB356DA008E7D6A /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 7533B9681CB356DA008E7D6A /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		75C1F97B1CB5F69B0041CBB6 /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C1F9721CB5F69B0041CBB6 /* SVIndefiniteAnimatedView.m */; };
+		75C1F97C1CB5F69B0041CBB6 /* SVProgressAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C1F9741CB5F69B0041CBB6 /* SVProgressAnimatedView.m */; };
+		75C1F97D1CB5F69B0041CBB6 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 75C1F9761CB5F69B0041CBB6 /* SVProgressHUD.bundle */; };
+		75C1F97E1CB5F69B0041CBB6 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C1F9781CB5F69B0041CBB6 /* SVProgressHUD.m */; };
+		75C1F97F1CB5F69B0041CBB6 /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C1F97A1CB5F69B0041CBB6 /* SVRadialGradientLayer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +67,16 @@
 		7533B9641CB356A5008E7D6A /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		7533B9671CB356DA008E7D6A /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GDataXMLNode.h; sourceTree = "<group>"; };
 		7533B9681CB356DA008E7D6A /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GDataXMLNode.m; sourceTree = "<group>"; };
+		75C1F9711CB5F69B0041CBB6 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		75C1F9721CB5F69B0041CBB6 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		75C1F9731CB5F69B0041CBB6 /* SVProgressAnimatedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressAnimatedView.h; sourceTree = "<group>"; };
+		75C1F9741CB5F69B0041CBB6 /* SVProgressAnimatedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressAnimatedView.m; sourceTree = "<group>"; };
+		75C1F9751CB5F69B0041CBB6 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		75C1F9761CB5F69B0041CBB6 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		75C1F9771CB5F69B0041CBB6 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		75C1F9781CB5F69B0041CBB6 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		75C1F9791CB5F69B0041CBB6 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		75C1F97A1CB5F69B0041CBB6 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +138,7 @@
 		7533B9441CB3503C008E7D6A /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				75C1F9701CB5F69B0041CBB6 /* SVProgressHUD */,
 				7533B9661CB356DA008E7D6A /* GDataXML */,
 				7533B9451CB3503C008E7D6A /* AFNetworking */,
 			);
@@ -162,6 +178,23 @@
 				7533B9681CB356DA008E7D6A /* GDataXMLNode.m */,
 			);
 			path = GDataXML;
+			sourceTree = "<group>";
+		};
+		75C1F9701CB5F69B0041CBB6 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				75C1F9711CB5F69B0041CBB6 /* SVIndefiniteAnimatedView.h */,
+				75C1F9721CB5F69B0041CBB6 /* SVIndefiniteAnimatedView.m */,
+				75C1F9731CB5F69B0041CBB6 /* SVProgressAnimatedView.h */,
+				75C1F9741CB5F69B0041CBB6 /* SVProgressAnimatedView.m */,
+				75C1F9751CB5F69B0041CBB6 /* SVProgressHUD-Prefix.pch */,
+				75C1F9761CB5F69B0041CBB6 /* SVProgressHUD.bundle */,
+				75C1F9771CB5F69B0041CBB6 /* SVProgressHUD.h */,
+				75C1F9781CB5F69B0041CBB6 /* SVProgressHUD.m */,
+				75C1F9791CB5F69B0041CBB6 /* SVRadialGradientLayer.h */,
+				75C1F97A1CB5F69B0041CBB6 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +257,7 @@
 				7533B9261CB34605008E7D6A /* LaunchScreen.storyboard in Resources */,
 				7533B9231CB34605008E7D6A /* Assets.xcassets in Resources */,
 				7533B9211CB34605008E7D6A /* Main.storyboard in Resources */,
+				75C1F97D1CB5F69B0041CBB6 /* SVProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,10 +269,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7533B91E1CB34605008E7D6A /* ViewController.m in Sources */,
+				75C1F97F1CB5F69B0041CBB6 /* SVRadialGradientLayer.m in Sources */,
 				7533B9691CB356DA008E7D6A /* GDataXMLNode.m in Sources */,
 				7533B95E1CB3503C008E7D6A /* AFSecurityPolicy.m in Sources */,
 				7533B91B1CB34605008E7D6A /* AppDelegate.m in Sources */,
 				7533B95B1CB3503C008E7D6A /* AFHTTPRequestOperationManager.m in Sources */,
+				75C1F97E1CB5F69B0041CBB6 /* SVProgressHUD.m in Sources */,
+				75C1F97B1CB5F69B0041CBB6 /* SVIndefiniteAnimatedView.m in Sources */,
 				7533B95F1CB3503C008E7D6A /* AFURLConnectionOperation.m in Sources */,
 				7533B95A1CB3503C008E7D6A /* AFHTTPRequestOperation.m in Sources */,
 				7533B9431CB34FAC008E7D6A /* HttpRequest.m in Sources */,
@@ -248,6 +285,7 @@
 				7533B9611CB3503C008E7D6A /* AFURLResponseSerialization.m in Sources */,
 				7533B9621CB3503C008E7D6A /* AFURLSessionManager.m in Sources */,
 				7533B9181CB34605008E7D6A /* main.m in Sources */,
+				75C1F97C1CB5F69B0041CBB6 /* SVProgressAnimatedView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +436,7 @@
 				7533B92C1CB34605008E7D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
