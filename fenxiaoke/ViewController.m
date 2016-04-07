@@ -79,10 +79,28 @@
     xmlpramStr=[self getMyxmlStr:userPassdic:@"4166989841"];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     [SVProgressHUD setMinimumDismissTimeInterval:1.2];
+    [self panduanSXBan];
  }
 
 
-
+-(void)panduanSXBan
+{
+     NSDate *now = [NSDate date];
+     NSCalendar *calendar = [NSCalendar currentCalendar];
+     NSUInteger unitFlags = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit | NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit;
+     NSDateComponents *dateComponent = [calendar components:unitFlags fromDate:now];
+    int hour = [dateComponent hour];
+    
+     NSLog(@"%d",hour);
+    
+    if(hour>0&&hour<=12)
+    {
+        self.switcher.on=YES;
+    }else
+    {
+        self.switcher.on=NO;
+    }
+}
 
 #pragma  mark  构造xml 文件格式
 -(NSString*)getMyxmlStr:(NSDictionary*)dic:(NSString*)postID
