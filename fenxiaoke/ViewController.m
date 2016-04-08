@@ -22,7 +22,7 @@
 //"M2" : 22.586514,
 //"M3" : 113.929489,
 #define  USERNAME @"18665354221"
-#define  PASSWORD @"a12345"
+#define  PASSWORD @"sr930607"
 
 #define  COOKKEY  [NSString stringWithFormat:@"%@COOK",USERNAME]
 #define  WEIDU  [NSString stringWithFormat:@"%@WEIDU",USERNAME]
@@ -34,6 +34,7 @@
     NSMutableString *itemValue;
     NSString *xmlpramStr;
     BOOL isLogink;
+    NSNumber *companyID;
 }
 
 
@@ -303,10 +304,20 @@
         [SVProgressHUD dismiss];
     }else if(isLogink==YES&&isYzm==NO)
     {
+        
+        //获取公司的ID
+        NSArray *companyArr=dic[@"M2"];
+        NSDictionary *compAnydic=[companyArr firstObject];
+        double cid=[compAnydic[@"M2"] doubleValue];
+        companyID=[NSNumber numberWithDouble:cid];
+        
         [self getInfoAction:nil];
+
+
+      
     }else
     {
-        [self showMsg:@"登陆失败！"];
+         [self showMsg:@"登陆失败！"];
           [SVProgressHUD dismiss];
     }
     
@@ -320,7 +331,10 @@
     NSString *getinfoUrlstr=@"https://www.fxiaoke.com/FHE/EM0AXUL/Authorize/EnterpriseUserLogin/iOS.55?_vn=55&_ov=8.3&_postid=-1575664558&traceId=E-E..-69F10DFB-09E0-4E0E-A455-2DB1A15D61C4";
     
     NSDictionary *driveInfo=@{@"M1":@2,@"M3":@"5A7F6DBD-7DD9-4332-947A-2A21E7FAC9F9",@"M4":@0,@"M5":@"iPhone6"};
-    NSDictionary*infodic=@{@"M3":@"&#x5E7F;&#x4E1C;&#x7701;&#x6DF1;&#x5733;&#x5E02;",@"M1":@384370,@"M2":driveInfo};
+ 
+    NSDictionary*infodic=@{@"M3":@"&#x5E7F;&#x4E1C;&#x7701;&#x6DF1;&#x5733;&#x5E02;",@"M1":companyID,@"M2":driveInfo};
+    
+    //384370
     
     NSString  *tempstr=[self getMyxmlStr:infodic:@"701070970"];
  
@@ -378,11 +392,11 @@
     NSDictionary *dic=@{@"M27":locationString,
                         @"M16":@"&#x7B7E;&#x5230;&#x8BBE;&#x5907;&#x5DF2;&#x8D8A;&#x72F1;",
                         @"M22" : @"",
-                        @"M11" : weidun,//weidun
+                        @"M11" : @22.587006,//weidun
                         @"M25" : @"",
                         @"M20" : @"",
                         @"M23" : @"",
-                        @"M12" :jdn,//jdn
+                        @"M12" :@113.930709,//jdn
                         @"M15" : @1,
                         @"M10" : sxb,
                         @"M21" : @"",
